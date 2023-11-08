@@ -5,11 +5,13 @@ namespace Carfleet
     public class TestTruck
     {
         #region private attributes
+
         string _registration = "VD 123 567";
         string _brand = "Volvo";
         string _model = "FH16";
         string _chassisNumber = "VOL45-0157966";
         Truck _truck;
+
         #endregion private attributes
 
 
@@ -25,7 +27,7 @@ namespace Carfleet
             //given
 
             //when
-            
+
             //then
             Assert.AreEqual(_registration, _truck.Registration);
             Assert.AreEqual(_brand, _truck.Brand);
