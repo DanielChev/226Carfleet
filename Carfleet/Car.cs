@@ -69,7 +69,8 @@ namespace Carfleet{
 
         public override string ToString()
         {
-            //TODO
+            string expectedString = _registration + " - " + _brand + " - " + _model + " - " + _chassisNumber;
+            return expectedString;
         }
         #endregion public methods
     }
