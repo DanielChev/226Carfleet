@@ -26,8 +26,8 @@ namespace Carfleet{
 
         public override string ToString()
         {
-            return base.ToString()+ " - " +_isCarryingGoods;
-        }
+            return base.ToString()+" - "+_isCarryingGoods;
+        } 
         #endregion public methods
     }
 }
