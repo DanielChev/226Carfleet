@@ -8,7 +8,7 @@ namespace Carfleet
         private string _firstname;
         private string _phoneNumber;
         private string _emailAddress;
-        private string _language;
+        private List<string> _language;
         
         public Person(string name, string firstname, string phoneNumber, string emailAddress)
         {
@@ -24,7 +24,7 @@ namespace Carfleet
             _firstname = firstname;
             _phoneNumber = phoneNumber;
             _emailAddress = emailAddress;
-            _language = language.ToString();
+            _language = language;
         }
 
         public string Name
@@ -75,7 +75,7 @@ namespace Carfleet
             }
         }
         
-        public string Languages
+        public List<string> Languages
         {
             get
             {
