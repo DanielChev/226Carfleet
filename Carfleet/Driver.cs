@@ -1,4 +1,6 @@
-﻿namespace Carfleet
+﻿using System.Collections.Generic;
+
+namespace Carfleet
 {
     public class Driver:Person
     {
@@ -9,7 +11,7 @@
         #endregion private attributes
 
         #region public methods
-        public Driver(string name, string firstname, string phonenumber, string emailaddress, string language):base(name, firstname, phonenumber, emailaddress, language)
+        public Driver(string name, string firstname, string phonenumber, string emailaddress):base(name, firstname, phonenumber, emailaddress)
         {
         }
 
