@@ -8,7 +8,7 @@ namespace Carfleet
         private string _firstname;
         private string _phoneNumber;
         private string _emailAddress;
-        private List<string> _language;
+        private List<string> _languages;
         
         public Person(string name, string firstname, string phoneNumber, string emailAddress)
         {
@@ -18,13 +18,13 @@ namespace Carfleet
             _emailAddress = emailAddress;
         }
         
-        public Person(string name, string firstname, string phoneNumber, string emailAddress,List<string> language)
+        public Person(string name, string firstname, string phoneNumber, string emailAddress,List<string> languages)
         {
             _name = name;
             _firstname = firstname;
             _phoneNumber = phoneNumber;
             _emailAddress = emailAddress;
-            _language = language;
+            _languages = languages;
         }
 
         public string Name
@@ -79,11 +79,25 @@ namespace Carfleet
         {
             get
             {
-                return _language;
+                return _languages;
             }
             set
             {
-                _language = value;
+                if (_languages.Count > 0)
+                {
+                    _languages.AddRange(value);
+                }
+                
+                foreach (var item in _languages)
+                {
+                    if (value.Contains(item))
+                    {
+                        _languages.Remove(item);
+                    }
+                    return;
+                }
+                
+                _languages = value;
             }
         }
         
